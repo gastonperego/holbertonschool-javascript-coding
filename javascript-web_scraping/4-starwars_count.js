@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-request.get('https://swapi-api.hbtn.io/api/films/', (err, response, body) => {
+request.get(process.argv[2], (err, response, body) => {
   if (err) throw err;
   const data = (JSON.parse(body));
   let num = 0;
