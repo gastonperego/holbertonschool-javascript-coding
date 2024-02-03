@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 function countStudents(path) {
   try {
@@ -24,9 +24,9 @@ function countStudents(path) {
     console.log(`Number of students in CS: ${field1}. List: ${array1.join(', ')}`);
     console.log(`Number of students in SWE: ${field2}. List: ${array2.join(', ')}`);
   }
-  catch (err){
+  catch (err) {
     throw new Error('Cannot load the database');
   }
 }
 
-module.exports = countStudents
+module.exports = countStudents;
