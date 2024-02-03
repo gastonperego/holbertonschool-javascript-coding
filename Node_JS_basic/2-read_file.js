@@ -5,7 +5,7 @@ function countStudents(path) {
     const data = (fs.readFileSync(path, 'utf-8'));
     const lines = data.split('\n');
     const finalArray = lines.filter((x) => x.length > 0);
-    console.log(`Number of students: ${final_array.length - 1}`);
+    console.log(`Number of students: ${finalArray.length - 1}`);
     let field1 = 0;
     let field2 = 0;
     const array1 = [];
@@ -25,7 +25,8 @@ function countStudents(path) {
     console.log(`Number of students in SWE: ${field2}. List: ${array2.join(', ')}`);
   }
   catch (err){
-    throw new Error('Cannot load the database');
+    console.log(err)
+    //throw new Error('Cannot load the database');
   }
 }
 
