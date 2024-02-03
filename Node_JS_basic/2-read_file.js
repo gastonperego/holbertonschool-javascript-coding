@@ -4,13 +4,13 @@ function countStudents(path) {
   try {
     const data = (fs.readFileSync(path, 'utf-8'));
     const lines = data.split('\n');
-    const final_array = lines.filter((x) => x.length > 0);
+    const finalArray = lines.filter((x) => x.length > 0);
     console.log(`Number of students: ${final_array.length - 1}`);
     let field1 = 0;
     let field2 = 0;
-    let array1 = [];
-    let array2 = [];
-    for (line of final_array) {
+    const array1 = [];
+    const array2 = [];
+    for (const line of finalArray) {
       const data = line.split(',');
       if (data[3] === 'CS') {
         array1.push(data[0]);
