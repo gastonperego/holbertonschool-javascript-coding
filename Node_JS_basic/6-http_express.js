@@ -1,11 +1,10 @@
 const express = require('express');
 
-const app = express()
-
+const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello Holberton School!');
-  });
+  res.send('Hello Holberton School!');
+});
 
 app.use((req, res) => {
   res.status(404).send(`
